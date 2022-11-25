@@ -8,14 +8,15 @@ class pagesController extends Controller
 {
     
     function countries(){
-        return view('secondform');
+        return view('welcome');
+    }
+        
     
-}
 
 function saveCountry(Request $request){
     //return $request->all();
     country::create([
-    'name'=> $request->country_name,
+    'name_'=> $request->country_name,
     'continent_name'=> $request->continent_name]);
     return redirect('/country'); // this is view file; 
    

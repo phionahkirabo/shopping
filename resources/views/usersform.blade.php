@@ -42,12 +42,19 @@ input[type="submit"] {
     </style>
 </head>
 <body>
-    <form method="POST" action="/saveCountry">
+    <form method="POST" action="/saveuser">
         @csrf
+        <label>Names</label>
         <input type="text" placeholder="full_name" name ="full_name"><br>
+        <label>Email</label>
         <input type="text" placeholder="email" name ="email"><br>
-        <input type="radio" placeholder="gender" name ="gender"><br>
+        <label>Gender</label>
+        <input type="radio" placeholder="gender" name ="gender">Male<br>
+        <input type="radio" placeholder="gender" name ="gender">female<br>
+        <input type="radio" placeholder="gender" name ="gender"> Other<br>
+        <label>Date of Birth</label>
         <input type="date" placeholder="date_of_birth" name ="date_of_birth"><br>
+        <label>Country code</label>
         <input type="integer" placeholder="country_code" name ="country_code">
         <input type="submit" value="Save">
       </form>

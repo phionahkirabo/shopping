@@ -9,7 +9,8 @@ class country extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'name',
+        'name_',
         'continent_name'
     ];
+    protected $primaryKey = 'code';
 }
